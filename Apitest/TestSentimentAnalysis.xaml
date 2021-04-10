@@ -1,0 +1,124 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="TestSentimentAnalysis" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="396,773" sap2010:WorkflowViewState.IdRef="TestSentimentAnalysis_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:njl="clr-namespace:Newtonsoft.Json.Linq;assembly=Newtonsoft.Json" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="44">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>Newtonsoft.Json.Linq</x:String>
+      <x:String>Newtonsoft.Json</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="17">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>Newtonsoft.Json</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="TestSentimentAnalysis" sap:VirtualizedContainerService.HintSize="376,713" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="strOutput" />
+      <Variable x:TypeArguments="x:Int32" Name="strSatusSentiment" />
+      <Variable x:TypeArguments="njl:JObject" Name="jsonOutput" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:HttpClient Body="{x:Null}" ConsumerKey="{x:Null}" ConsumerSecret="{x:Null}" ContinueOnError="{x:Null}" OAuth1Token="{x:Null}" OAuth1TokenSecret="{x:Null}" OAuth2Token="{x:Null}" Password="{x:Null}" ResourcePath="{x:Null}" ResponseHeaders="{x:Null}" Username="{x:Null}" AcceptFormat="JSON" BodyFormat="application/xml" ClientCertificate="[Nothing]" ClientCertificatePassword="[Nothing]" DisplayName="HTTP Request" EndPoint="https://sentiment-analysis.p.rapidapi.com/sentiment-2.1" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="HttpClient_1" Method="GET" Result="[strOutput]" StatusCode="[strSatusSentiment]" TimeoutMS="6000">
+      <ui:HttpClient.Attachments>
+        <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+      </ui:HttpClient.Attachments>
+      <ui:HttpClient.Cookies>
+        <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+      </ui:HttpClient.Cookies>
+      <ui:HttpClient.Headers>
+        <InArgument x:TypeArguments="x:String" x:Key="accept">application/json</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="x-rapidapi-key">1a569ae192mshc6819159f51da3fp19fdffjsn9a6db61f2fe7</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="x-rapidapi-host">sentiment-analysis.p.rapidapi.com</InArgument>
+      </ui:HttpClient.Headers>
+      <ui:HttpClient.Parameters>
+        <InArgument x:TypeArguments="x:String" x:Key="lang">fr</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="txt" xml:space="preserve">L’inspection du 10 au 12 juillet 2019 avait pour objectif de contrôler l’organisation mise en œuvre par le site
+pour répondre aux exigences réglementaires associées au déploiement des modifications des installations et de
+leurs modalités d’exploitation autorisées attachées au 3ème réexamen périodique (RP3) du réacteur n° 1. Elle a
+notamment conduit l’ASN à confronter l’état réel des installations à celui requis par la démonstration de sûreté
+nucléaire à l’état technique visite décennale 2 (VD2) et documentaire « Dossier d’amendement aux règles de
+conduite normale (DA RCN) et dossier d’amendement sûreté (DA sûreté) » constituant le socle pris en compte
+par EDF pour la conception des modifications du RP3. Plusieurs systèmes portant le statut « EIP »1 ont fait
+l’objet de contrôles sur le terrain et les modalités d’accomplissement de plusieurs actions locales à réaliser en
+situation d’accident ont été vérifiées.
+Les inspecteurs ont également examiné les modalités d’identification des écarts et contrôlé par sondage les
+actions engagées par le CNPE au regard des dispositions prescrites au chapitre VI du titre II de l’arrêté en
+référence [2].
+Les inspecteurs retiennent que les dispositions mises en œuvre pour assurer la traçabilité des actions à engager
+puis à réaliser après la découverte d’une anomalie susceptible d’affecter la qualification d’un EIP, présentent
+encore des fragilités. Les contrôles réalisés par sondage montrent que les informations reportées dans les outils
+utilisés par le CNPE ne permettent pas de statuer « en temps réel » sur la réalité des actions accomplies à la
+suite de la découverte de l’anomalie, la traçabilité requise par le système de gestion intégrée d’EDF étant
+systématiquement, pour les exemples examinés, en retard de phase. L’utilisation de ces informations introduit
+un biais d’une part, dans le processus de prise de décision mentionné à l’article 2.4.1 du titre II de l’arrêté en
+référence [2] et, d’autre part, lors de la confrontation des indicateurs issus de l’exploitation de ces outils aux
+indicateurs mis en place par les services centraux d’EDF. Ce biais est préjudiciable à l’évaluation de l’efficacité
+des processus rattachés au système de gestion intégrée mentionné à l’article L. 593-6 du code de
+l’environnement.
+Au plan technique, si les systèmes contrôlés ne présentent pas de dégradations significatives, les inspecteurs ont
+noté plusieurs anomalies susceptibles d’affecter, à moyen terme, l’intégrité du système de refroidissement
+(SEC). Des actions de remédiation sont donc attendues de votre part en application des dispositions
+mentionnées à l’article 3.1 de l’arrêté en référence [2], notamment celle visant le 1er niveau du principe de
+défense en profondeur.
+Les mises en situation visant l’application de plusieurs consignes encadrant les actions de terrain à réaliser en
+situation d’incident et d’accident ont révélé des dysfonctionnements des processus de validation de ces
+documents et des écarts révélés par leur application « à blanc ». Lorsque des évolutions de ces documents sont
+requises, les processus de traitement des écarts affectants ces documents requièrent une réactivité des services
+centraux d’EDF qui ne permet pas à EDF, à ce stade, de satisfaire pleinement l’exigence de conformité
+mentionnée à l’article 1.2 de l’arrêté en référence [2] avant la première mise en œuvre des référentiels
+d’exploitation modifiés. 
+</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="model">general</InArgument>
+      </ui:HttpClient.Parameters>
+      <ui:HttpClient.UrlSegments>
+        <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+      </ui:HttpClient.UrlSegments>
+    </ui:HttpClient>
+    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="MessageBox_2" Text="[strSatusSentiment]" />
+    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="334,61" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="[strSatusSentiment.ToString]" />
+    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="334,61" sap2010:WorkflowViewState.IdRef="WriteLine_2" Text="[strOutput]" />
+    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[strOutput]" />
+    <ui:DeserializeJson x:TypeArguments="njl:JObject" DisplayName="Deserialize JSON" sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="DeserializeJson`1_1" JsonObject="[jsonOutput]" JsonString="[strOutput]" />
+    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="MessageBox_3" Text="[jsonOutput(&quot;score_tag&quot;)]" />
+  </Sequence>
+</Activity>
