@@ -6,7 +6,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>930,900</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>930,936</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>detectLanguages2_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -65,7 +65,7 @@
       <AssemblyReference>System.ServiceModel</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Flowchart sap2010:Annotation.AnnotationText="Pre-Condition: ExcelGlobal File  filled correctly &#xA;Post-Condition: The langage of each mail detected and writed&#xA;&#xA;Read body mail of each row, detect langue and write it in ExcelGlabalFIle" DisplayName="detectLanguages2" sap:VirtualizedContainerService.HintSize="685,835" sap2010:WorkflowViewState.IdRef="Flowchart_1">
+  <Flowchart sap2010:Annotation.AnnotationText="Pre-Condition: ExcelGlobal File  filled correctly &#xA;Post-Condition: The langage of each mail detected and writed&#xA;&#xA;Read body mail of each row, detect langue and write it in ExcelGlabalFIle" DisplayName="detectLanguages" sap:VirtualizedContainerService.HintSize="685,831" sap2010:WorkflowViewState.IdRef="Flowchart_1">
     <Flowchart.Variables>
       <Variable x:TypeArguments="x:String" Name="strMailSubject" />
       <Variable x:TypeArguments="sd:DataTable" Default="[New System.Data.DataTable]" Name="dtMails" />
@@ -96,11 +96,11 @@
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <av:Point x:Key="ShapeLocation">200,189</av:Point>
-          <av:Size x:Key="ShapeSize">200,83</av:Size>
+          <av:Size x:Key="ShapeSize">200,82</av:Size>
           <av:PointCollection x:Key="ConnectorLocation">300,271 300,306.5</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <TryCatch sap2010:Annotation.AnnotationText="Read excel global file content" DisplayName="Try Catch : To read ExcelGlabalFIle" sap:VirtualizedContainerService.HintSize="200,83" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+      <TryCatch sap2010:Annotation.AnnotationText="Read excel global file content" DisplayName="Try Catch : To read ExcelGlabalFIle" sap:VirtualizedContainerService.HintSize="200,82" sap2010:WorkflowViewState.IdRef="TryCatch_1">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -176,12 +176,12 @@
         </TryCatch.Catches>
       </TryCatch>
       <FlowStep.Next>
-        <FlowDecision x:Name="__ReferenceID2" Condition="[out_BoolExcelGlobalFile]" DisplayName="GlobalFile filled ?" sap:VirtualizedContainerService.HintSize="96,87" sap2010:WorkflowViewState.IdRef="FlowDecision_1">
+        <FlowDecision x:Name="__ReferenceID2" Condition="[out_BoolExcelGlobalFile]" DisplayName="GlobalFile filled ?" sap:VirtualizedContainerService.HintSize="95,87" sap2010:WorkflowViewState.IdRef="FlowDecision_1">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               <av:Point x:Key="ShapeLocation">252.5,306.5</av:Point>
-              <av:Size x:Key="ShapeSize">96,87</av:Size>
+              <av:Size x:Key="ShapeSize">95,87</av:Size>
               <av:PointCollection x:Key="FalseConnector">347.5,350 520,350 520,436</av:PointCollection>
               <av:PointCollection x:Key="TrueConnector">252.5,350 120,350 120,434</av:PointCollection>
             </scg:Dictionary>
@@ -191,11 +191,11 @@
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <av:Point x:Key="ShapeLocation">20,434</av:Point>
-                  <av:Size x:Key="ShapeSize">200,96</av:Size>
-                  <av:PointCollection x:Key="ConnectorLocation">120,530 120,650 210,650</av:PointCollection>
+                  <av:Size x:Key="ShapeSize">200,93</av:Size>
+                  <av:PointCollection x:Key="ConnectorLocation">120,527 120,650 210,650</av:PointCollection>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:ForEachRow CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="Read each email content in excel " DataTable="[dtMails]" DisplayName="For Each Row of &quot;emailBody&quot; colonne " sap:VirtualizedContainerService.HintSize="200,96" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+              <ui:ForEachRow CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="Read each email content in excel " DataTable="[dtMails]" DisplayName="For Each Row of &quot;emailBody&quot; colonne " sap:VirtualizedContainerService.HintSize="200,93" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
                 <ui:ForEachRow.Body>
                   <ActivityAction x:TypeArguments="sd:DataRow">
                     <ActivityAction.Argument>
@@ -594,10 +594,10 @@
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <av:Point x:Key="ShapeLocation">210,624</av:Point>
-                      <av:Size x:Key="ShapeSize">200,52</av:Size>
+                      <av:Size x:Key="ShapeSize">200,51</av:Size>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:LogMessage DisplayName="Log Message - The Ending of workflow" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="LogMessage_16" Level="Warn" Message="[&quot;detectLanguage : Language detected - Completed&quot;]" />
+                  <ui:LogMessage DisplayName="Log Message - The Ending of workflow" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="LogMessage_16" Level="Warn" Message="[&quot;detectLanguage : Language detected - Completed&quot;]" />
                 </FlowStep>
               </FlowStep.Next>
             </FlowStep>
@@ -607,11 +607,11 @@
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <av:Point x:Key="ShapeLocation">420,436</av:Point>
-                  <av:Size x:Key="ShapeSize">200,112</av:Size>
-                  <av:PointCollection x:Key="ConnectorLocation">520,548 520,650 410,650</av:PointCollection>
+                  <av:Size x:Key="ShapeSize">200,108</av:Size>
+                  <av:PointCollection x:Key="ConnectorLocation">520,544 520,650 410,650</av:PointCollection>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <Sequence sap2010:Annotation.AnnotationText="The ExcelGlobalFile was not read succesfully" sap:VirtualizedContainerService.HintSize="200,112" sap2010:WorkflowViewState.IdRef="Sequence_19">
+              <Sequence sap2010:Annotation.AnnotationText="The ExcelGlobalFile was not read succesfully" sap:VirtualizedContainerService.HintSize="200,108" sap2010:WorkflowViewState.IdRef="Sequence_19">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -646,11 +646,11 @@
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <av:Point x:Key="ShapeLocation">200,104.5</av:Point>
-          <av:Size x:Key="ShapeSize">200,52</av:Size>
+          <av:Size x:Key="ShapeSize">200,51</av:Size>
           <av:PointCollection x:Key="ConnectorLocation">300,155.5 300,189</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:LogMessage DisplayName="Log Message - The begining of workflow" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Warn" Message="[&quot;detectLanguges : langue detection - Started&quot;]">
+      <ui:LogMessage DisplayName="Log Message - The begining of workflow" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Warn" Message="[&quot;detectLanguges : langue detection - Started&quot;]">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>

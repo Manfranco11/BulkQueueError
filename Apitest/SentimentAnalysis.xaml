@@ -6,7 +6,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>930,887</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>930,927</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>SentimentAnalysis2_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -65,7 +65,7 @@
       <AssemblyReference>System.ServiceModel</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Flowchart sap2010:Annotation.AnnotationText="Pre-Condition: ExcelGlabalFile  filled correctly  with email and lang detection&#xA;Post-Condition: The lsentiment of each mail detected&#xA;&#xA;Read body mail of each row, detect sentiment and write it in ExcelGlabalFIle" DisplayName="SentimentAnalysis2" sap:VirtualizedContainerService.HintSize="693,822" sap2010:WorkflowViewState.IdRef="Flowchart_1">
+  <Flowchart sap2010:Annotation.AnnotationText="Pre-Condition: ExcelGlabalFile  filled correctly  with email and lang detection&#xA;Post-Condition: The lsentiment of each mail detected&#xA;&#xA;Read body mail of each row, detect sentiment and write it in ExcelGlabalFIle" DisplayName="SentimentAnalysis" sap:VirtualizedContainerService.HintSize="693,822" sap2010:WorkflowViewState.IdRef="Flowchart_1">
     <Flowchart.Variables>
       <Variable x:TypeArguments="sd:DataTable" Default="[New System.Data.DataTable]" Name="dtMailSentiment" />
       <Variable x:TypeArguments="x:String" Name="strSentimentAnalysis" />
@@ -172,10 +172,7 @@
         </TryCatch.Catches>
       </TryCatch>
       <FlowStep.Next>
-        <FlowDecision x:Name="__ReferenceID2" DisplayName="Sentiment filled ?" sap:VirtualizedContainerService.HintSize="97,87" sap2010:WorkflowViewState.IdRef="FlowDecision_1">
-          <FlowDecision.Condition>
-            <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="out_BoolExcelGlobalFileSentiment" />
-          </FlowDecision.Condition>
+        <FlowDecision x:Name="__ReferenceID2" Condition="[out_BoolExcelGlobalFileSentiment]" DisplayName="Sentiment filled ?" sap:VirtualizedContainerService.HintSize="97,87" sap2010:WorkflowViewState.IdRef="FlowDecision_1">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -575,7 +572,7 @@
                       <av:Size x:Key="ShapeSize">200,51</av:Size>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:LogMessage DisplayName="Log Message - The Ending of workflow" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_14" Level="Warn" Message="[&quot;SentimentAnalysis : data push to queue - Completed&quot;]" />
+                  <ui:LogMessage DisplayName="Log Message - The Ending of workflow" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="LogMessage_14" Level="Warn" Message="[&quot;SentimentAnalysis : data push to queue - Completed&quot;]" />
                 </FlowStep>
               </FlowStep.Next>
             </FlowStep>

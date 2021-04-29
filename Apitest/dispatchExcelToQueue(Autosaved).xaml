@@ -6,7 +6,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>883,2231</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>930,2231</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>dispatchExcelToQueue_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="34">
@@ -78,16 +78,8 @@
   </TextExpression.ReferencesForImplementation>
   <Sequence sap2010:Annotation.AnnotationText="Pre-Condition: All collone in ExcelGlabalFile  filled correctly &#xA;Post-Condition: All content of  ExcelGlabalFile pushed to the queue&#xA;&#xA;Read ExcelGlabalFile and  send each content to the queue called excelMails" DisplayName="bulkAddQueue" sap:VirtualizedContainerService.HintSize="614,2126" sap2010:WorkflowViewState.IdRef="Sequence_3">
     <Sequence.Variables>
-      <Variable x:TypeArguments="sd:DataTable" Name="dtMailSentiment">
-        <Variable.Default>
-          <mva:VisualBasicValue x:TypeArguments="sd:DataTable" ExpressionText="New System.Data.DataTable" />
-        </Variable.Default>
-      </Variable>
-      <Variable x:TypeArguments="sd:DataTable" Name="dtMailsOutput">
-        <Variable.Default>
-          <mva:VisualBasicValue x:TypeArguments="sd:DataTable" ExpressionText="New System.Data.DataTable" />
-        </Variable.Default>
-      </Variable>
+      <Variable x:TypeArguments="sd:DataTable" Default="[New System.Data.DataTable]" Name="dtMailSentiment" />
+      <Variable x:TypeArguments="sd:DataTable" Default="[New System.Data.DataTable]" Name="dtMailsOutput" />
       <Variable x:TypeArguments="x:String" Default="INPUT\MailsFile.xlsx" Name="xlGLobalFile" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>

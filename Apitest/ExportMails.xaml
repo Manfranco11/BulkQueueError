@@ -7,7 +7,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>883,3203</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>930,3203</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ReadGMail_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="46">
@@ -76,11 +76,7 @@
   </TextExpression.ReferencesForImplementation>
   <Sequence sap2010:Annotation.AnnotationText="Pre-Condition: N/A&#xA;Post-Condition:  mails readed and writed into excel file&#xA;&#xA;Export 10 unread mails from gmail account and write it into google spreadsheet" DisplayName="exportMails" sap:VirtualizedContainerService.HintSize="516,3098" sap2010:WorkflowViewState.IdRef="Sequence_2">
     <Sequence.Variables>
-      <Variable x:TypeArguments="scg:List(snm:MailMessage)" Name="lstEmails">
-        <Variable.Default>
-          <mva:VisualBasicValue x:TypeArguments="scg:List(snm:MailMessage)" ExpressionText="New List(of System.Net.Mail.MailMessage)" />
-        </Variable.Default>
-      </Variable>
+      <Variable x:TypeArguments="scg:List(snm:MailMessage)" Default="[New List(of System.Net.Mail.MailMessage)]" Name="lstEmails" />
       <Variable x:TypeArguments="x:String" Name="pwdGmail" />
       <Variable x:TypeArguments="x:Int32" Default="2" Name="indexCell" />
       <Variable x:TypeArguments="x:String" Default="INPUT\MailsFile.xlsx" Name="xlGlobalFile" />
